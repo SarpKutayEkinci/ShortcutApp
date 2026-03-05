@@ -1,0 +1,22 @@
+
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+## NuGet
+packages/
+*.nuget.props
+*.nuget.targets
+
+
+.DS_Store
