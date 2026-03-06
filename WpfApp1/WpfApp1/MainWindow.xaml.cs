@@ -120,11 +120,30 @@ namespace WpfApp1
                 {
                     Process.Start(new ProcessStartInfo("steam://open/main") { UseShellExecute = true });
                 }
+                else if (query == "wsl")
+                {
+                   
+                    string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+                    var startInfo = new ProcessStartInfo
+                    {
+                        FileName = "wsl.exe",
+                        
+                        WorkingDirectory = desktopPath,
+                        UseShellExecute = false
+                    };
+
+                    
+                    Process.Start(startInfo)?.WaitForExit();
+                }
+
+
                 else if (query == "kapat" || query == "exit")
                 {
-                    
+
                     Application.Current.Shutdown();
                 }
+
             }
             catch (Exception ex)
             {
